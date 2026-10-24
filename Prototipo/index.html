@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIRA | Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+<body>
+<div class="layout">
+
+    <!-- MENU PRINCIPAL -->
+    <aside class="sidebar">
+        <div class="logo">✚ EIRA</div>
+        <p class="subtitle">Sistema de Citas Médicas</p>
+
+        <h3>Menú principal</h3>
+        <a class="active" href="#inicio">⌂ &nbsp; Inicio</a>
+        <a href="#pacientes">♙ &nbsp; Pacientes</a>
+        <a href="#citas">▦ &nbsp; Citas médicas</a>
+        <a href="#medicos">✚ &nbsp; Médicos</a>
+
+        <h3>Administración</h3>
+        <a href="#registro-paciente">＋ &nbsp; Registrar paciente</a>
+        <a href="#registro-cita">＋ &nbsp; Programar cita</a>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <header>
+            <h2>Panel administrativo</h2>
+            <div class="user">Recepción | María López</div>
+        </header>
+
+        <div class="content">
+
+            <!-- INICIO -->
+            <section class="welcome" id="inicio">
+                <h1>¡Bienvenido al sistema EIRA!</h1>
+                <p>Administra los pacientes, médicos y citas de la clínica.</p>
+            </section>
+
+            <!-- ESTADISTICAS -->
+            <div class="stats">
+                <div class="stat-card">
+                    <p>Total de pacientes</p>
+                    <h2>128</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Citas de hoy</p>
+                    <h2>18</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Médicos registrados</p>
+                    <h2>8</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Citas pendientes</p>
+                    <h2>5</h2>
+                </div>
+            </div>
+
+            <!-- MODULO DE CITAS -->
+            <section class="section" id="citas">
+                <div class="section-title">
+                    <h2>Próximas citas médicas</h2>
+                    <p>Listado de citas registradas en el sistema.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>N.º</th>
+                                <th>Paciente</th>
+                                <th>Médico</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Ana Martínez</td>
+                                <td>Dr. Carlos Ruiz</td>
+                                <td>26/10/2026</td>
+                                <td>08:00 AM</td>
+                                <td><span class="status confirmed">Confirmada</span></td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Pedro López</td>
+                                <td>Dra. Sofía Reyes</td>
+                                <td>26/10/2026</td>
+                                <td>09:30 AM</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Lucía Gómez</td>
+                                <td>Dr. Carlos Ruiz</td>
+                                <td>27/10/2026</td>
+                                <td>10:00 AM</td>
+                                <td><span class="status confirmed">Confirmada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- MODULO DE PACIENTES -->
+            <section class="section" id="pacientes">
+                <div class="section-title">
+                    <h2>Registro de pacientes</h2>
+                    <p>Información ficticia para representar el control de pacientes.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre completo</th>
+                                <th>Teléfono</th>
+                                <th>Edad</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>P001</td>
+                                <td>Ana Martínez</td>
+                                <td>8888-1001</td>
+                                <td>28</td>
+                                <td><span class="status confirmed">Activo</span></td>
+                            </tr>
+                            <tr>
+                                <td>P002</td>
+                                <td>Pedro López</td>
+                                <td>8888-1002</td>
+                                <td>42</td>
+                                <td><span class="status confirmed">Activo</span></td>
+                            </tr>
+                            <tr>
+                                <td>P003</td>
+                                <td>Lucía Gómez</td>
+                                <td>8888-1003</td>
+                                <td>35</td>
+                                <td><span class="status confirmed">Activo</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- FORMULARIO DE PACIENTES -->
+            <section class="section" id="registro-paciente">
+                <div class="section-title">
+                    <h2>Registrar nuevo paciente</h2>
+                    <p>Formulario representativo para ingresar información.</p>
+                </div>
+
+                <form action="#registro-paciente" method="get">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="nombre">Nombre completo</label>
+                            <input id="nombre" type="text"
+                                placeholder="Ej. Juan Pérez" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="cedula">Número de identificación</label>
+                            <input id="cedula" type="text"
+                                placeholder="Ej. 001-000000-0000A" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="telefono">Teléfono</label>
+                            <input id="telefono" type="tel"
+                                placeholder="Ej. 8888-0000" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="edad">Edad</label>
+                            <input id="edad" type="number"
+                                min="0" max="120" placeholder="Ej. 25" required>
+                        </div>
+
+                        <div class="field full">
+                            <label for="direccion">Dirección</label>
+                            <textarea id="direccion" rows="2"
+                                placeholder="Dirección del paciente"></textarea>
+                        </div>
+
+                        <div class="field full">
+                            <button class="btn" type="submit">
+                                Registrar paciente
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- MODULO DE MEDICOS -->
+            <section class="section" id="medicos">
+                <div class="section-title">
+                    <h2>Médicos registrados</h2>
+                    <p>Directorio de profesionales de la clínica.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Médico</th>
+                                <th>Especialidad</th>
+                                <th>Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M001</td>
+                                <td>Dr. Carlos Ruiz</td>
+                                <td>Medicina general</td>
+                                <td>08:00 AM - 12:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>M002</td>
+                                <td>Dra. Sofía Reyes</td>
+                                <td>Pediatría</td>
+                                <td>01:00 PM - 05:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>M003</td>
+                                <td>Dr. José Mendoza</td>
+                                <td>Cardiología</td>
+                                <td>09:00 AM - 01:00 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- FORMULARIO DE CITAS -->
+            <section class="section" id="registro-cita">
+                <div class="section-title">
+                    <h2>Programar una cita</h2>
+                    <p>Formulario para representar la programación de consultas.</p>
+                </div>
+
+                <form action="#registro-cita" method="get">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="paciente-cita">Paciente</label>
+                            <select id="paciente-cita" required>
+                                <option value="">Seleccione un paciente</option>
+                                <option>Ana Martínez</option>
+                                <option>Pedro López</option>
+                                <option>Lucía Gómez</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="medico-cita">Médico</label>
+                            <select id="medico-cita" required>
+                                <option value="">Seleccione un médico</option>
+                                <option>Dr. Carlos Ruiz</option>
+                                <option>Dra. Sofía Reyes</option>
+                                <option>Dr. José Mendoza</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="fecha">Fecha de la cita</label>
+                            <input id="fecha" type="date" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="hora">Hora de la cita</label>
+                            <input id="hora" type="time" required>
+                        </div>
+
+                        <div class="field full">
+                            <label for="motivo">Motivo de consulta</label>
+                            <textarea id="motivo" rows="3"
+                                placeholder="Describa el motivo de la consulta"></textarea>
+                        </div>
+
+                        <div class="field full">
+                            <button class="btn" type="submit">
+                                Programar cita
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            EIRA © 2026 | Prototipo académico de gestión de citas médicas
+        </footer>
+
+    </main>
+</div>
+</body>
+</html>
